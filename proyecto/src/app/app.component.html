@@ -324,12 +324,20 @@
       </svg>
     </a>
 </div>
-<br><br><br>
-<ul>
-  <li *ngFor="let producto of productos">
-    Nombre: {{ producto.nombre }} - Costo: {{ producto.costo }}
-  </li>
-</ul>
+<br><br><br><br><br><br>
+<div *ngIf="mostrarLista">
+  <ul>
+    <li *ngFor="let producto of productos">
+      Nombre: {{ producto.nombre }} - Costo: {{ producto.costo }}
+    </li>
+  </ul>
+</div>
+
+<button mat-button (click)="toggleLista()">
+  {{ mostrarLista ? 'Ocultar Lista' : 'Mostrar Lista' }}
+</button>
+
+
 
 <div class="content" role="main">
 

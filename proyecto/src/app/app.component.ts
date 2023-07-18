@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 interface Producto {
   nombre: string;
@@ -17,6 +21,12 @@ export class AppComponent {
       { nombre: 'Producto 2', costo: '20.00' },
       { nombre: 'Producto 3', costo: '30.00' },
     ];
+  
+    mostrarLista = true;
+
+  toggleLista(): void {
+    this.mostrarLista = !this.mostrarLista;
+    }
   }
 
 interface Producto {
