@@ -324,6 +324,12 @@
       </svg>
     </a>
 </div>
+<br><br><br>
+<ul>
+  <li *ngFor="let producto of productos">
+    Nombre: {{ producto.nombre }} - Costo: {{ producto.costo }}
+  </li>
+</ul>
 
 <div class="content" role="main">
 
